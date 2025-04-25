@@ -75,8 +75,13 @@ body {
   }
 }
 
-section {
-	view-timeline: --scroll;
+
+@media (max-width: 500px) {
+	@keyframes moveDown {
+	  to {
+		transform: translateY(0) translateX(90px) scale(.4);
+	  }
+	}
 }
 .--moveDown {
 	animation: moveDown ease-in both;
@@ -85,7 +90,7 @@ section {
 }
 @keyframes moveDown {
   to {
-    transform: translateY(0) translateX(90px) scale(.4);
+    transform: translateX(150px);
   }
 }
 
