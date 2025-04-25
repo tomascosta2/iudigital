@@ -70,3 +70,11 @@ body {
     transform: translateY(0);
   }
 }
+
+/* Carrusel servicios */
+@media (max-width: 500px) {
+	.swiper-slide-next {
+		scale: 95%;
+		transition: all .3s ease-in;
+	}
+}

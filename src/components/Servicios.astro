@@ -1,0 +1,107 @@
+<section class="py-[80px] bg-[#1E1E1E] overflow-clip relative">
+	<div
+		class="size-[300px] absolute -left-[150px] -top-[150px] blur-[80px] rounded-full bg-[#484848]"
+	>
+	</div>
+	<div
+		class="size-[300px] absolute -right-[150px] -bottom-[150px] blur-[80px] rounded-full bg-[#484848]"
+	></div>
+	<div class="tcp-container relative">
+		<h2 class="text-white font-bold text-[32px] mb-4">
+			Nuestros servicios
+		</h2>
+		<p class="text-white/80 max-w-[390px]">
+			Hacemos equipo con empresas que quieren romper el molde y les
+			brindamos soluciones que trazan el camino para la generación de
+			leads y ventas.
+		</p>
+		<div class="swiper mySwiper mt-8" style="overflow: visible !important;">
+			<div class="swiper-wrapper">
+				<!-- Tarjeta 1 -->
+				<div
+					class="swiper-slide bg-[#2F2F2F] rounded-xl border border-white/20 p-8 min-h-[200px]"
+				>
+					<h3 class="mb-2 text-white font-bold text-[18px] max-w-[215px]">Paid Media</h3>
+					<p class="text-sm text-gray-300">
+						Gestionamos tus campañas en Google y redes sociales para que
+						llegues a más personas y multipliques tus ventas.
+					</p>
+				</div>
+	
+				<!-- Tarjeta 2 -->
+				<div
+					class="swiper-slide bg-[#2F2F2F] rounded-xl border border-white/20 p-8 min-h-[200px]"
+				>
+					<h3 class="mb-2 text-white font-bold text-[18px] max-w-[215px]">
+						Diseño web y desarrollo de e-commerce
+					</h3>
+					<p class="text-sm text-gray-300">
+						Diseñamos sitios modernos y tiendas online que combinan
+						estética, velocidad y enfoque en la conversión.
+					</p>
+				</div>
+	
+				<!-- Tarjeta 3 -->
+				<div
+					class="swiper-slide bg-[#2F2F2F] rounded-xl border border-white/20 p-8 min-h-[200px]"
+				>
+					<h3 class="mb-2 text-white font-bold text-[18px] max-w-[215px]">Email marketing</h3>
+					<p class="text-sm text-gray-300">
+						Creamos campañas de correo que mantienen el interés, generan
+						confianza y automatizan tus ventas.
+					</p>
+				</div>
+	
+				<!-- Tarjeta 4 -->
+				<div
+					class="swiper-slide bg-[#2F2F2F] rounded-xl border border-white/20 p-8 min-h-[200px]"
+				>
+					<h3 class="mb-2 text-white font-bold text-[18px] max-w-[215px]">
+						Diseño y creación de anuncios
+					</h3>
+					<p class="text-sm text-gray-300">
+						Anuncios visuales y persuasivos que destacan en el feed y
+						convierten clics en clientes.
+					</p>
+				</div>
+				<!-- Tarjeta 4 -->
+				<div
+					class="swiper-slide bg-[#2F2F2F] rounded-xl border border-white/20 p-8 min-h-[200px]"
+				>
+					<h3 class="mb-2 text-white font-bold text-[18px] max-w-[215px]">
+						Diseño y creación de anuncios
+					</h3>
+					<p class="text-sm text-gray-300">
+						Anuncios visuales y persuasivos que destacan en el feed y
+						convierten clics en clientes.
+					</p>
+				</div>
+			</div>
+		</div>
+		<a class="iu-btn mt-8" href="#!">Agendar llamada »</a>
+	</div>
+</section>
+
+<script>
+	// Core de Swiper y estilos
+	import Swiper from 'swiper';
+	import 'swiper/css';
+	// Módulo Navigation de Swiper y estilos
+	import { Navigation } from "swiper/modules";
+	import "swiper/css/navigation";
+  
+	// Configurar Swiper
+	const swiper = new Swiper(".swiper", {
+	  modules: [Navigation],
+	  slidesPerView: 2.8,
+	  spaceBetween: 16,
+	  breakpoints: {
+		0: {
+			slidesPerView: 1.1,
+		},
+		568: {
+			slidesPerView: 2.8,
+		}
+	  }
+	});
+  </script>
