@@ -90,7 +90,7 @@ body {
 }
 @keyframes moveDown {
   to {
-    transform: translateX(150px);
+    transform: translateX(50px) scale(1.4);
   }
 }
 
