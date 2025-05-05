@@ -1,0 +1,88 @@
+---
+const TESTIMONIOS = [
+  {
+    nombre: "Testimonio",
+    texto: "Texto",
+	columna: 1
+  },
+  {
+    nombre: "Testimonio",
+    texto: "Texto",
+	columna: 3
+  },
+  {
+    nombre: "Testimonio",
+    texto: "Texto",
+	columna: 2
+  },
+  {
+    nombre: "Testimonio",
+    texto: "Texto",
+	columna: 1
+  },
+  {
+    nombre: "Testimonio",
+    texto: "Texto",
+	columna: 2
+  },
+  {
+    nombre: "Testimonio",
+    texto: "Texto",
+	columna: 3
+  },
+  {
+    nombre: "Testimonio",
+    texto: "Texto",
+	columna: 1
+  },
+  {
+    nombre: "Testimonio",
+    texto: "Texto",
+	columna: 2
+  }
+];
+
+
+const col1 = TESTIMONIOS.filter(t => t.columna === 1);
+const col2 = TESTIMONIOS.filter(t => t.columna === 2);
+const col3 = TESTIMONIOS.filter(t => t.columna === 3);
+---
+
+<section class="py-[60px] md:py-[80px] px-4 bg-[#1E1E1E]">
+	<div class="max-w-[1040px] mx-auto">
+		<h2 class="text-[24px] leading-[120%] md:text-[40px] md:leading-[50px] text-[#FFF] font-bold max-w-[740px] mx-auto text-center">
+			Testimonios
+		</h2>
+		<p class="text-center text-[#FFF]/80 font-bold mt-4">Descripcion</p>
+		<div class="grid md:grid-cols-3 md:gap-4 mt-8">
+			{[col1, col2, col3].map((col) => (
+			<div class="columns-1">
+				{col.map((t) => (
+				<div class="border-1 border-white/20 bg-[#2F2F2F] p-8 rounded-lg mb-4">
+					<div class="flex items-center gap-4">
+						<div class="size-[50px] rounded-full bg-[#0143EC] flex items-center justify-center">
+							<svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<g clip-path="url(#clip0_3097_2208)">
+								<path d="M13.6461 5.58591C13.6461 4.69457 13.292 3.83973 12.6617 3.20946C12.0314 2.57919 11.1766 2.2251 10.2853 2.2251C9.39392 2.2251 8.53908 2.57919 7.90881 3.20946C7.27854 3.83973 6.92445 4.69457 6.92445 5.58591C6.92445 6.47725 7.27854 7.33209 7.90881 7.96236C8.53908 8.59263 9.39392 8.94672 10.2853 8.94672C11.1766 8.94672 12.0314 8.59263 12.6617 7.96236C13.292 7.33209 13.6461 6.47725 13.6461 5.58591ZM4.90797 5.58591C4.90797 4.15976 5.4745 2.79203 6.48294 1.78359C7.49138 0.775153 8.85911 0.208618 10.2853 0.208618C11.7114 0.208618 13.0791 0.775153 14.0876 1.78359C15.096 2.79203 15.6626 4.15976 15.6626 5.58591C15.6626 7.01206 15.096 8.37979 14.0876 9.38823C13.0791 10.3967 11.7114 10.9632 10.2853 10.9632C8.85911 10.9632 7.49138 10.3967 6.48294 9.38823C5.4745 8.37979 4.90797 7.01206 4.90797 5.58591ZM2.9461 19.7013H17.6286C17.2547 17.0421 14.9694 14.9962 12.2093 14.9962H8.3696C5.60954 14.9962 3.32419 17.0421 2.9503 19.7013H2.9461ZM0.875 20.4701C0.875 16.3321 4.22741 12.9797 8.3654 12.9797H12.2051C16.3431 12.9797 19.6955 16.3321 19.6955 20.4701C19.6955 21.1591 19.1368 21.7178 18.4478 21.7178H2.1227C1.43373 21.7178 0.875 21.1591 0.875 20.4701Z" fill="white"/>
+							</g>
+							<defs>
+								<clipPath id="clip0_3097_2208">
+									<rect width="18.8205" height="21.5092" fill="white" transform="translate(0.875 0.208618)"/>
+								</clipPath>
+							</defs>
+						</svg>
+						</div>
+						<div>
+							<p class="text-[#FFF]/80 font-semibold mb-1">{t.nombre}</p>
+							<img class="max-w-[106px]" src="/images/estrellas.webp" alt="Estrellas" />
+						</div>
+					</div>
+					<p class="mt-4 text-[#FFF]/80">“{t.texto}”</p>
+				</div>
+				))}
+			</div>
+			))}
+		</div>
+		<a href="#calendly" class="iu-btn mt-8 mx-auto">Agendar llamada »</a>
+	</div>
+</section>
