@@ -45,29 +45,45 @@ const TESTIMONIOS = [
 		texto: "Con su ayuda, pasamos de depender solo del boca en boca a tener una máquina constante de generación de clientes. Fue un antes y un después.",
 		columna: 3,
 	},
+	,
+	{
+		nombre: "Micaela - Weno Digital",
+		texto: "Trabajar con los chicos de IU fue una muy buena decisión. Desde el comienzo vimos resultados positivos! Se adelantan a cada necesidad con ideas claras y estratégicas. Gran equipo, vamos por más!",
+		columna: 1,
+	},
+	{
+		nombre: "Carmen González Balcarce - Reputation Director - Newlink",
+		texto: "Trabajar con Ivo es sinónimo de confianza y resultados. Es de los profesionales más sólidos y comprometpaid media con los que trabajé: domina la estrategia, implementa con precisión y siempre llega con insightsmpre llega con insights valiosos en los reportes. Pero además, lo hace todo con una actitud impecable y buena onda constante, algo que se valora muchísimo en el día a día",
+		columna: 2,
+	},
+	{
+		nombre: "Dasha Accesorios",
+		texto: "Estamos muy contentas con nuestra experiencia con IU digital en el manejo de la pauta publicitaria en DASHA porque hay un equipo 100% comprometido en hacerte sugerencias y proponerte ideas creativas para ir probando piezas que performen cada vez mejor y conviertan ventas. Además, su equipo va dándole seguimiento semanal y que está siempre dispuesto a probar mejoras y cambios en las campañas, lo cual te permite ir ajustando lo necesario para alcanzar tus objetivos.",
+		columna: 3,
+	},
 ];
 
-const col1 = TESTIMONIOS.filter((t) => t.columna === 1);
-const col2 = TESTIMONIOS.filter((t) => t.columna === 2);
-const col3 = TESTIMONIOS.filter((t) => t.columna === 3);
+const col1 = TESTIMONIOS.filter((t) => t!.columna === 1);
+const col2 = TESTIMONIOS.filter((t) => t!.columna === 2);
+const col3 = TESTIMONIOS.filter((t) => t!.columna === 3);
 ---
 
-<section class="py-[60px] md:py-[80px] px-4 bg-[#1E1E1E]">
+<section class="py-[60px] md:py-[80px] px-4 bg-[#1E1E1E]" id="testimonios">
 	<div class="max-w-[1040px] mx-auto">
 		<h2
-			class="text-[24px] leading-[120%] md:text-[40px] md:leading-[50px] text-[#FFF] font-bold max-w-[740px] mx-auto text-center"
+			class="text-[24px] mb-2 leading-[120%] md:text-[40px] md:leading-[50px] text-[#FFF] font-bold max-w-[740px] mx-auto text-center"
 		>
 			Testimonios
 		</h2>
 		<p class="text-center text-[#FFF]/80 font-bold mt-4">Descripcion</p>
-		<div class="grid md:grid-cols-3 md:gap-4 mt-8">
+		<div class="grid md:grid-cols-3 gap-4 mt-8">
 			{
 				[col1, col2, col3].map((col) => (
-					<div class="columns-1">
+					<div class="flex flex-col gap-4">
 						{col.map((t) => (
-							<div class="border-1 border-white/20 bg-[#2F2F2F] p-8 rounded-lg mb-4">
-								<div class="flex items-center gap-4">
-									<div class="size-[50px] rounded-full bg-[#0143EC] flex items-center justify-center">
+							<div class="border border-white/20 bg-[#2F2F2F] p-8 rounded-lg flex flex-col h-full">
+								<div class="flex items-start gap-4">
+									<div class="flex-shrink-0 size-[50px] rounded-full bg-[#0143EC] flex items-center justify-center">
 										<svg
 											width="20"
 											height="22"
@@ -95,7 +111,7 @@ const col3 = TESTIMONIOS.filter((t) => t.columna === 3);
 									</div>
 									<div>
 										<p class="text-[#FFF]/80 font-semibold mb-1">
-											{t.nombre}
+											{t!.nombre}
 										</p>
 										<img
 											class="max-w-[106px]"
@@ -104,7 +120,7 @@ const col3 = TESTIMONIOS.filter((t) => t.columna === 3);
 										/>
 									</div>
 								</div>
-								<p class="mt-4 text-[#FFF]/80">“{t.texto}”</p>
+								<p class="mt-4 text-[#FFF]/80">“{t!.texto}”</p>
 							</div>
 						))}
 					</div>

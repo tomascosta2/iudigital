@@ -7,6 +7,7 @@ import Layout from '../layouts/Layout.astro';
 import Testimonials from '../components/Testimonials.astro';
 import Copy from '../components/Copy.astro';
 import Faqs from '../components/Faqs.astro';
+import Carrousel from '../components/Carrousel.astro';
 ---
 
 <Layout>
@@ -14,9 +15,13 @@ import Faqs from '../components/Faqs.astro';
 		<div class="scale-105 absolute inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
 		<Header />
 		<Hero />
+		<Carrousel />
 		<Servicios />
 		<Comparativa />
+
 		<Testimonials />
+
+		</div>
 		<Copy />
 		<Faqs />
 		<p class="py-8 text-white/80 bg-[#1E1E1E] text-center px-4 relative">© IU Digital 2025. Todos los derechos reservados.</p>
