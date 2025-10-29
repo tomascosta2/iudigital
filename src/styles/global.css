@@ -114,28 +114,27 @@ body {
 }
 
 /* Carrusel marcas */
-@keyframes scroll {
-  0% {
-    transform: translate3d(0, 0, 0);
+ .logos-track {
+    display: flex;
+    align-items: center;
+    width: max-content;
   }
-  100% {
-    transform: translate3d(calc(-42% - 1rem), 0, 0);
+
+  /* Animación infinita y fluida */
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
   }
-}
 
-.animate-scroll {
-  display: flex;
-  align-items: center;
-  animation: scroll 20s linear infinite;
-  transform: translate3d(0, 0, 0);
-  will-change: transform;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  -webkit-transform: translateZ(0);
-  gap: 1rem;
-}
-
-.animate-scroll img {
-  display: block;
-  object-fit: cover;
-}
+  .animate-scroll {
+    animation: scroll 30s linear infinite;
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    gap: 1rem;
+  }

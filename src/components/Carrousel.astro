@@ -19,22 +19,24 @@ const logos = [
   >
     Empresas que confían en nuestros servicios
   </h2>
-  <div class="relative overflow-hidden">
-    <div class="flex animate-scroll gap-4 logos-slide">
-      {[
-        ...logos,
-        ...logos
-      ].map((logo, index) => (
-        <div
-          class="flex-shrink-0 w-48 h-24 bg-white rounded-md overflow-hidden flex items-center justify-center"
 
-      >
-        <img
-          src={logo}
-          alt={`Logo ${index + 1}`}
-          class="w-full h-full object-cover"
-        />
-      </div>
-    ))}
+  <div class="relative overflow-hidden">
+    <div class="flex logos-track animate-scroll gap-4">
+      {
+        [...logos, ...logos].map((logo, index) => (
+          <div
+            class="flex-shrink-0 min-w-[120px] md:min-w-[192px] h-24 bg-white rounded-md overflow-hidden flex items-center justify-center"
+            aria-hidden={index >= logos.length ? "true" : undefined}
+          >
+            <img
+              src={logo}
+              alt={`Logo ${index + 1}`}
+              class="w-full h-full object-contain"
+              loading="lazy"
+            />
+          </div>
+        ))
+      }
+    </div>
   </div>
 </section>
